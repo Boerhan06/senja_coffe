@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark text-cream font-jakarta antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl overflow-hidden transition-all duration-300 hover:border-amber/50 hover:shadow-amber/20 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-full bg-amber text-dark font-semibold transition-all duration-300 hover:bg-amber-light hover:shadow-lg hover:shadow-amber/30 hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-full border-2 border-amber text-amber font-semibold transition-all duration-300 hover:bg-amber hover:text-dark hover:shadow-lg hover:shadow-amber/30 hover:scale-105;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a0f00; 
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a853; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f0c060; 
+}
